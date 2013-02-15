@@ -1,0 +1,22 @@
+#pragma once
+
+#define SND_LASER1			gpEngine->smpLaser1.Play(1)
+#define SND_LASER2			gpEngine->smpLaser2.Play(2)
+#define SND_LASER3			gpEngine->smpLaser3.Play(3)
+#define SND_LASER4			gpEngine->smpLaser4.Play(4)
+#define SND_LASER5			gpEngine->smpLaser5.Play(5)
+#define SND_BIGLASER1		gpEngine->smpBigLaser1.Play(6)
+
+#define SND_DEFLECT			gpEngine->smpDeflect.Play(7)
+#define SND_FORCECHARGE		gpEngine->smpForceCharge.Play(8)
+#define SND_STOPFORCECHARGE	gpEngine->smpForceCharge.Stop(8)
+#define SND_FORCE			gpEngine->smpForceShot.Play(9)
+#define SND_SMALLEXPLODE	gpEngine->smpSmallExplode.Play(10)
+#define SND_MEDEXPLODE		gpEngine->smpMedExplode.Play(11)
+#define SND_LARGEEXPLODE	gpEngine->smpLargeExplode.Play(12)
+#define SND_LARGEEXPLODE2	gpEngine->smpLargeExplode2.Play(13)
+#define SND_PICKUP			gpEngine->smpPickup.Play(14)
+#define SND_ORBSPAWN		gpEngine->smpOrbSpawn.Play(15)
+#define SND_LASER6			gpEngine->smpLaser6.Play(16)
+#define SND_BIGLASER2		gpEngine->smpBigLaser2.Play(17)
+#define SND_LASER7			gpEngine->smpLaser7.Play(18)

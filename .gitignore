@@ -1,3 +1,19 @@
+*.ilk
+*.aps
+*.user
+*.ipch
+*.user
+*/Debug/*
+bin/*.txt
+bin/*.dat
+*.exe
+*.dll
+*.sdf
+lib/*
+*.opensdf
+*.suo
+*..exe
+*.cfg
 # Compiled Object files
 *.slo
 *.lo

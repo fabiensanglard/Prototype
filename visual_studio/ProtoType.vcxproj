@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC73F5C8-F325-41AD-89D7-D7C8B6D725A9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\fabien\Desktop\vanillaPrototyp\lib\SDL-1.2.9\include;C:\Users\fabien\Desktop\vanillaPrototyp\lib\DevIL-1.7.8\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;sdl.lib;sdlmain.lib;devil.lib;ilu.lib;ilut.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/Debug_ProtoType.exe</OutputFile>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)ProtoType.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\Users\fabien\Desktop\vanillaPrototyp\lib\SDL-1.2.9\lib\x86;C:\Users\fabien\Desktop\vanillaPrototyp\lib\DevIL-1.7.8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;sdl.lib;sdlmain.lib;sdl_net.lib;devil.lib;ilu.lib;ilut.lib;fmodvc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)ProtoType.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="icon1.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Prototyp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AnimGenerator.cpp" />
+    <ClCompile Include="..\src\Beam.cpp" />
+    <ClCompile Include="..\src\Boss.cpp" />
+    <ClCompile Include="..\src\BrainBoss.cpp" />
+    <ClCompile Include="..\src\BrainCell.cpp" />
+    <ClCompile Include="..\src\BreakScenery.cpp" />
+    <ClCompile Include="..\src\Bug.cpp" />
+    <ClCompile Include="..\src\Bullet.cpp" />
+    <ClCompile Include="..\src\Button.cpp" />
+    <ClCompile Include="..\src\CheckPoint.cpp" />
+    <ClCompile Include="..\src\Debris.cpp" />
+    <ClCompile Include="..\src\Demo.cpp" />
+    <ClCompile Include="..\src\Editor.cpp" />
+    <ClCompile Include="..\src\Editor_Anims.cpp" />
+    <ClCompile Include="..\src\Editor_EntityProperties.cpp" />
+    <ClCompile Include="..\src\Engine.cpp" />
+    <ClCompile Include="..\src\Engine_Generators.cpp" />
+    <ClCompile Include="..\src\Entity.cpp" />
+    <ClCompile Include="..\src\Explosion.cpp" />
+    <ClCompile Include="..\src\Fighter.cpp" />
+    <ClCompile Include="..\src\FileIO.cpp" />
+    <ClCompile Include="..\src\Fire.cpp" />
+    <ClCompile Include="..\src\firebug.cpp" />
+    <ClCompile Include="..\src\Font.cpp" />
+    <ClCompile Include="..\src\FrontEnd.cpp" />
+    <ClCompile Include="..\src\Game.cpp" />
+    <ClCompile Include="..\src\Generator.cpp" />
+    <ClCompile Include="..\src\Geo2D.cpp" />
+    <ClCompile Include="..\src\Geo2D_Draw.cpp" />
+    <ClCompile Include="..\src\HUD.cpp" />
+    <ClCompile Include="..\src\LadyBird.cpp" />
+    <ClCompile Include="..\src\Log.cpp" />
+    <ClCompile Include="..\src\Map.cpp" />
+    <ClCompile Include="..\src\MidBoss.cpp" />
+    <ClCompile Include="..\src\Orb.cpp" />
+    <ClCompile Include="..\src\Player.cpp" />
+    <ClCompile Include="..\src\PostEffects.cpp" />
+    <ClCompile Include="..\src\PowerDroid.cpp" />
+    <ClCompile Include="..\src\PowerUp.cpp" />
+    <ClCompile Include="..\src\Profiler.cpp" />
+    <ClCompile Include="..\src\ProtoType.cpp" />
+    <ClCompile Include="..\src\RandExplosion.cpp" />
+    <ClCompile Include="..\src\Rhino.cpp" />
+    <ClCompile Include="..\src\Rocket.cpp" />
+    <ClCompile Include="..\src\Serializer.cpp" />
+    <ClCompile Include="..\src\Serpent.cpp" />
+    <ClCompile Include="..\src\SolarFlare.cpp" />
+    <ClCompile Include="..\src\Sound.cpp" />
+    <ClCompile Include="..\src\SpaceTrash.cpp" />
+    <ClCompile Include="..\src\Sperm.cpp" />
+    <ClCompile Include="..\src\Sprite.cpp" />
+    <ClCompile Include="..\src\SpriteEffect.cpp" />
+    <ClCompile Include="..\src\SpriteSheet.cpp" />
+    <ClCompile Include="..\src\StarBurst.cpp" />
+    <ClCompile Include="..\src\stdafx.cpp" />
+    <ClCompile Include="..\src\SuperTurret.cpp" />
+    <ClCompile Include="..\src\Timer.cpp" />
+    <ClCompile Include="..\src\TriggerSlowDown.cpp" />
+    <ClCompile Include="..\src\TriggerSpeedUp.cpp" />
+    <ClCompile Include="..\src\Turret.cpp" />
+    <ClCompile Include="..\src\UTIL_bitop.cpp" />
+    <ClCompile Include="..\src\UTIL_Fade.cpp" />
+    <ClCompile Include="..\src\UTIL_Misc.cpp" />
+    <ClCompile Include="..\src\UTIL_openGL.cpp" />
+    <ClCompile Include="..\src\UTIL_SDL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AnimGenerator.h" />
+    <ClInclude Include="..\src\Beam.h" />
+    <ClInclude Include="..\src\Boss.h" />
+    <ClInclude Include="..\src\BrainBoss.h" />
+    <ClInclude Include="..\src\BrainCell.h" />
+    <ClInclude Include="..\src\BreakScenery.h" />
+    <ClInclude Include="..\src\Bug.h" />
+    <ClInclude Include="..\src\Bullet.h" />
+    <ClInclude Include="..\src\Button.h" />
+    <ClInclude Include="..\src\CheckPoint.h" />
+    <ClInclude Include="..\src\Debris.h" />
+    <ClInclude Include="..\src\Demo.h" />
+    <ClInclude Include="..\src\Engine.h" />
+    <ClInclude Include="..\src\Entity.h" />
+    <ClInclude Include="..\src\Explosion.h" />
+    <ClInclude Include="..\src\Fighter.h" />
+    <ClInclude Include="..\src\FileIO.h" />
+    <ClInclude Include="..\src\Fire.h" />
+    <ClInclude Include="..\src\fireBug.h" />
+    <ClInclude Include="..\src\Font.h" />
+    <ClInclude Include="..\src\Generator.h" />
+    <ClInclude Include="..\src\Geo2D.h" />
+    <ClInclude Include="..\src\Geo2D_Draw.h" />
+    <ClInclude Include="..\src\gl\glext.h" />
+    <ClInclude Include="..\src\gl\wglext.h" />
+    <ClInclude Include="..\src\LadyBird.h" />
+    <ClInclude Include="..\src\Log.h" />
+    <ClInclude Include="..\src\MidBoss.h" />
+    <ClInclude Include="..\src\Orb.h" />
+    <ClInclude Include="..\src\Player.h" />
+    <ClInclude Include="..\src\PowerDroid.h" />
+    <ClInclude Include="..\src\PowerUp.h" />
+    <ClInclude Include="..\src\Profiler.h" />
+    <ClInclude Include="..\src\RandExplosion.h" />
+    <ClInclude Include="..\src\resource.h" />
+    <ClInclude Include="..\src\resource1.h" />
+    <ClInclude Include="..\src\resource2.h" />
+    <ClInclude Include="..\src\Rhino.h" />
+    <ClInclude Include="..\src\Rocket.h" />
+    <ClInclude Include="..\src\SDL_KeyMap.h" />
+    <ClInclude Include="..\src\Serializer.h" />
+    <ClInclude Include="..\src\Serpent.h" />
+    <ClInclude Include="..\src\SolarFlare.h" />
+    <ClInclude Include="..\src\Sound.h" />
+    <ClInclude Include="..\src\Sound_Macros.h" />
+    <ClInclude Include="..\src\SpaceTrash.h" />
+    <ClInclude Include="..\src\Sperm.h" />
+    <ClInclude Include="..\src\Sprite.h" />
+    <ClInclude Include="..\src\SpriteEffect.h" />
+    <ClInclude Include="..\src\SpriteSheet.h" />
+    <ClInclude Include="..\src\StarBurst.h" />
+    <ClInclude Include="..\src\stdafx.h" />
+    <ClInclude Include="..\src\SuperTurret.h" />
+    <ClInclude Include="..\src\Tile.h" />
+    <ClInclude Include="..\src\Timer.h" />
+    <ClInclude Include="..\src\TriggerSlowDown.h" />
+    <ClInclude Include="..\src\TriggerSpeedUp.h" />
+    <ClInclude Include="..\src\Turret.h" />
+    <ClInclude Include="..\src\UTIL_bitop.h" />
+    <ClInclude Include="..\src\UTIL_Fade.h" />
+    <ClInclude Include="..\src\UTIL_Misc.h" />
+    <ClInclude Include="..\src\UTIL_openGL.h" />
+    <ClInclude Include="..\src\UTIL_SDL.h" />
+    <ClInclude Include="..\src\Vector.h" />
+    <ClInclude Include="resource3.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
