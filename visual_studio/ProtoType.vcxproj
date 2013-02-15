@@ -57,7 +57,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Users\fabien\Desktop\vanillaPrototyp\lib\SDL-1.2.9\include;C:\Users\fabien\Desktop\vanillaPrototyp\lib\DevIL-1.7.8\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\lib\SDL-1.2.9\include;..\lib\DevIL-1.7.8\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;sdl.lib;sdlmain.lib;devil.lib;ilu.lib;ilut.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -67,7 +67,7 @@
       <ProgramDatabaseFile>$(OutDir)ProtoType.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>C:\Users\fabien\Desktop\vanillaPrototyp\lib\SDL-1.2.9\lib\x86;C:\Users\fabien\Desktop\vanillaPrototyp\lib\DevIL-1.7.8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib\SDL-1.2.9\lib\x86;..\lib\DevIL-1.7.8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
