@@ -20,7 +20,7 @@ public:
 	 *************************************/
 	Font();
 	~Font();
-	bool LoadFont(char* name, char* shadowname);
+	bool LoadFont(const char* name, const char* shadowname);
 	void SetBlendMode(unsigned int src, unsigned int dst);
 	void SetScale(float width, float height);
 	void EnableShadow();
@@ -35,7 +35,7 @@ private:
 	/*************************************
 	 ** Methods							**
 	 *************************************/
-	bool Font::GenerateGlyphs(char* name);
+	bool Font::GenerateGlyphs(const char* name);
 	void GenerateOffsets(unsigned char* data, int w, int h);//variable widths
 	void GenerateCoords();//texture coordinate per glyph
 	/*************************************

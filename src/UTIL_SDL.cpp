@@ -42,6 +42,7 @@ namespace UTIL_SDL
 		stringstream(str);
 		str << "Resolution Set: " << width << "x" << height << "x" << bpp << endl;
 		gLog.OutPut(str.str());
+#ifdef _WIN32
 		if(!vsync)
 		{
 			PFNWGLSWAPINTERVALEXTPROC wglSwapIntervalEXT  = (PFNWGLSWAPINTERVALEXTPROC) wglGetProcAddress("wglSwapIntervalEXT");
@@ -50,6 +51,7 @@ namespace UTIL_SDL
 			wglSwapIntervalEXT(0);
 			gLog.OutPut("Vsync Disabled.\n");
 		}
+#endif
 /*		else
 		{
 			PFNWGLSWAPINTERVALEXTPROC wglSwapIntervalEXT  = (PFNWGLSWAPINTERVALEXTPROC) wglGetProcAddress("wglSwapIntervalEXT");
@@ -245,7 +247,7 @@ namespace UTIL_SDL
 				case GL_FRAMEBUFFER_UNSUPPORTED  : printf("GL_FRAMEBUFFER_UNSUPPORTED  \n"); break ;
 				case GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE  : printf("GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE  \n"); break ;
 				//case GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE  : printf("GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE  \n"); break ;
-				case GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS   : printf("GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS   \n"); break ;
+				//case GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS   : printf("GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS   \n"); break ;
 				default: printf("error code unknow: %d",status);
 			}
 		}

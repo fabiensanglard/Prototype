@@ -1,5 +1,9 @@
 #pragma once
-#include "sdl.h"
+#ifdef WIN32
+#include <sdl.h>
+#else
+#include <SDL/SDL.h>
+#endif
 #include "UTIL_openGL.h"
 #include "Log.h"
 

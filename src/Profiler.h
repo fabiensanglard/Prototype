@@ -1,5 +1,9 @@
 #pragma
+#ifdef WIN32
 #include <sdl.h>
+#else
+#include <SDL/SDL.h>
+#endif
 #include <vector>
 #include <string>
 #include <fstream>

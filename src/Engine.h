@@ -1,8 +1,16 @@
 #pragma once
+
 #ifdef WIN32
-#include <windows.h>
+    #include <windows.h>
+    #include <sdl.h>
+#else
+    #include <SDL/SDL.h>
+    #define DeleteFile unlink
+    #define stricmp strcasecmp
+    #define _TCHAR char
+#define _tmain main
 #endif
-#include <sdl.h>
+
 #include <fstream>
 
 #include "Sound.h"

@@ -2,11 +2,16 @@
 //#include <gl/glew.h>
 #ifdef _WIN32
 #include <windows.h>
-#endif
 #include <gl/gl.h>
 #include <gl/glu.h>
 #include "gl/glext.h"
 #include "gl/wglext.h"
+#else
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#endif
+
+#define ILUT_USE_OPENGL 1
 #include <il/il.h>
 #include <il/ilu.h>
 #include <il/ilut.h>

@@ -1,6 +1,12 @@
 #include "Sound.h"
-#include "SDL.h"
+#ifdef WIN32
+#include <sdl.h>
 #include "SDL_mixer.h"
+
+#else
+#include <SDL/SDL.h>
+#include "SDL_Mixer/SDL_Mixer.h"
+#endif
 
 void Sound::Volume(int channel,int vol){
 	Mix_Volume(1,vol);

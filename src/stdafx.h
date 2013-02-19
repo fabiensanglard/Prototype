@@ -5,9 +5,11 @@
 
 #pragma once
 
-
 #include <iostream>
-#include <tchar.h>
+
+#ifdef _WIN32
+    #include <tchar.h>
+#endif
 
 // TODO: reference additional headers your program requires here
 #include "Engine.h"

@@ -20,7 +20,7 @@ Font::~Font()
 		glDeleteTextures(1,&texID);
 }
 
-bool Font::LoadFont(char* name, char* shadowname)
+bool Font::LoadFont(const char* name,const char* shadowname)
 {
 	if(!GenerateGlyphs(name))
 		return false;
@@ -33,7 +33,7 @@ bool Font::LoadFont(char* name, char* shadowname)
 
 	return true;
 }
-bool Font::GenerateGlyphs(char* name)
+bool Font::GenerateGlyphs(const char* name)
 {
 	ILuint ImageName;
 	ilOriginFunc(IL_ORIGIN_UPPER_LEFT);

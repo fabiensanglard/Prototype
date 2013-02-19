@@ -25,7 +25,7 @@ public:
 //================================================================================================//
 	void ReadVariable(string file, string varname, int& value);
 	void ReadVariable(string file, string varname, float& value);
-	void ReadVariable(string file, string varname, string& value);
+	void ReadVariable(string file, string varname, string value);
 
 private:
 	bool SearchFileGenerate(string file);

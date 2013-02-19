@@ -30,6 +30,7 @@ void Serializer::PutComment(string file, string comment)
 //================================================================================================//
 void Serializer::ReadVariable(string file, string varname, int& value)
 {
+#ifdef _WIN32
 	if(SearchFileGenerate(file))//need to write to the cfg
 	{
 		ofstream f;
@@ -65,9 +66,11 @@ void Serializer::ReadVariable(string file, string varname, int& value)
 		}
 		f.close();
 	}
+#endif
 }
 void Serializer::ReadVariable(string file, string varname, float& value)
 {
+    #ifdef _WIN32
 	if(SearchFileGenerate(file))
 	{
 		ofstream f;
@@ -103,9 +106,11 @@ void Serializer::ReadVariable(string file, string varname, float& value)
 		}
 		f.close();
 	}
+#endif
 }
-void Serializer::ReadVariable(string file, string varname, string& value)
+void Serializer::ReadVariable(string file, string varname, string value)
 {
+    #ifdef _WIN32
 	if(SearchFileGenerate(file))
 	{
 		ofstream f;
@@ -142,6 +147,7 @@ void Serializer::ReadVariable(string file, string varname, string& value)
 		}
 		f.close();
 	}
+#endif
 }
 //================================================================================================//
 						/************************************************************************
