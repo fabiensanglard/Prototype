@@ -72,7 +72,7 @@ X_FILES := ../bin/prototype.x
 # http://downloads.sourceforge.net/openil/DevIL-1.7.8.tar.gz
 # ./configure --prefix=$HOME/install --enable-ILUT --enable-ILU
 
-DEVIL_DIR ?= /usr/lib
+DEVIL_DIR ?= /usr
 
 CC := g++
 CFLAGS := -Wall -O2 -Wno-write-strings -Wno-unknown-pragmas -I../src
