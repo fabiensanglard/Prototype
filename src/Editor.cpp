@@ -583,8 +583,8 @@ void Engine::RenderEditor(const float interp)
 	//draw cursor during entity placement
 	if(bPlaceEntity)
 	{
-		int	ty = iTileFrame/16;
-		int	tx = iTileFrame-(ty*16);
+		
+		
 
 		scale = sprEntities.GetTextureScale();
 		tw = scale.first;
@@ -621,8 +621,8 @@ void Engine::RenderEditor(const float interp)
 	//draw cursor during anim placement
 	if(bPlaceAnim)
 	{
-		int	ty = iTileFrame/16;
-		int	tx = iTileFrame-(ty*16);
+		
+		
 
 		scale = sprAnims.GetTextureScale();
 		tw = scale.first;

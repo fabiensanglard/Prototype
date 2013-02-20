@@ -51,7 +51,7 @@ void Rhino::Update()
 {
 	iTakeDamageTicks--;
 	oPos = Pos;
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 		PlayBack();
 
 	if(bIsTurning)

@@ -27,7 +27,7 @@ public:
 	void ShutFile();
 
 	//open a file for reading or writing
-	bool GetFile(char* filename,char* ReadMode );
+	bool GetFile(const char* filename,const char* ReadMode );
 
 	char* ReadLine();
 
@@ -107,4 +107,4 @@ public:
 };
 
 
-#endif _FILEIO_H_
+#endif

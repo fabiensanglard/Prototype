@@ -7,7 +7,7 @@
 class Sound
 {
 public:
-	virtual bool Load(char* sound, bool loop)=0;
+	virtual bool Load(const char* sound, bool loop)=0;
 	
 	virtual void Stop(int channel)=0;
 	virtual void Discard()=0;
@@ -20,7 +20,7 @@ class Sample : public Sound
 public:
 	Sample(){pSample = 0;}
 //	~Sample(){ Discard(); }
-	bool Load(char* sound, bool loop);
+	bool Load(const char* sound, bool loop);
 	
 	void Play(int channel);
 	void Stop(int channel);
@@ -40,7 +40,7 @@ class Stream : public Sound
 public:
 	Stream(){pStream = 0;}
 //	~Stream(){ Discard(); }
-	bool Load(char* sound, bool loop);
+	bool Load(const char* sound, bool loop);
 	
 	void Play(int channel);
 	void Stop(int channel);

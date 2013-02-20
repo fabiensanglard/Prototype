@@ -76,7 +76,7 @@ SolarFlare* SolarFlare::Clone()const
 void SolarFlare::Update()
 {
 	iTakeDamageTicks--;
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 		PlayBack();
 
 	oPos = Pos;
@@ -113,7 +113,7 @@ void SolarFlare::Update()
 	if(gpEngine->bRecording && gpEngine->pRecordEnt == this)
 		return;
 	iTickSection--;
-	if(IsHead && iTickSection == 0 || IsHead && iTickSection==7 && iCurSection == SolarFlare_LENGTH)
+	if((IsHead && iTickSection == 0) || (IsHead && iTickSection==7 && iCurSection == SolarFlare_LENGTH))
 	{
 		if(iCurSection>=0)
 		{

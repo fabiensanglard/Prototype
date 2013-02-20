@@ -87,7 +87,7 @@ Serpent* Serpent::Clone()const
 void Serpent::Update()
 {
 	iTakeDamageTicks--;
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 		PlayBack();
 
 	if(IsHead)
@@ -129,7 +129,7 @@ void Serpent::Update()
 	if(gpEngine->bRecording && gpEngine->pRecordEnt == this)
 		return;
 	iTickSection--;
-	if(IsHead && iTickSection == 0 || IsHead && iTickSection==7 && iCurSection == SERPENT_LENGTH)
+	if((IsHead && iTickSection == 0) || (IsHead && iTickSection==7 && iCurSection == SERPENT_LENGTH))
 	{
 		if(iCurSection>=0)
 		{

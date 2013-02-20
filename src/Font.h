@@ -29,13 +29,13 @@ public:
 	void DisableSineWave();
 	void SetColor(float r, float g, float b, float a);
 	void SetAlignment(int align);
-	float GetStringLength(char* txt);
-	void Print(char* txt, float x, float y);
+	float GetStringLength(const char* txt);
+	void Print(const char* txt, float x, float y);
 private:
 	/*************************************
 	 ** Methods							**
 	 *************************************/
-	bool Font::GenerateGlyphs(const char* name);
+	bool GenerateGlyphs(const char* name);
 	void GenerateOffsets(unsigned char* data, int w, int h);//variable widths
 	void GenerateCoords();//texture coordinate per glyph
 	/*************************************

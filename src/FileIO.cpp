@@ -42,7 +42,7 @@ void CFileIO::ShutFile(){
 }
 
 
-bool CFileIO::GetFile(char* filename,char* ReadMode ){
+bool CFileIO::GetFile(const char* filename,const char* ReadMode ){
 
 	strcpy(m_szFileName,filename);
 	strcpy(m_szReadMode,ReadMode);

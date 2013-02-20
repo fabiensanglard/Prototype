@@ -32,6 +32,8 @@ public:
 
 	virtual void LoadFromFile(CFileIO &fIO)=0;
 	virtual void WriteToFile(CFileIO &fIO)=0;
+    
+    virtual ~Entity();
 };
 //checkout ControlledEntity::RecordKeyState for better info
 struct keyBuffer
@@ -44,7 +46,7 @@ class ControlledEntity : public Entity
 {
 public:
 	ControlledEntity();
-	~ControlledEntity();
+	virtual ~ControlledEntity();
 	void PreUpdate(); 
 	void RegisterControl(Button *buttons);
 	void SelfControl();

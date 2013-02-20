@@ -48,7 +48,7 @@ void PowerDroid::Update()
 {
 	iTakeDamageTicks--;
 	oPos = Pos;
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 		PlayBack();
 
 	InWater();
@@ -123,7 +123,8 @@ void PowerDroid::Update()
 		{
 			bool bHit=false;
 			bDirection?
-			ID = gpEngine->mTilesLayer1[(int)((Pos.x+32)/32)+1][(int)(Pos.y+32)/32].ID:
+			ID = gpEngine->mTilesLayer1[(int)((Pos.x+32)/32)+1][(int)(Pos.y+32)/32].ID
+            :
 			ID = gpEngine->mTilesLayer1[(int)(Pos.x)/32][(int)(Pos.y+32)/32].ID;
 			if(ID>=0 && ID<512)
 			{

@@ -29,7 +29,7 @@ void Engine::StartGame()
 
 	LoadMapData();
 	mPlayer.StartGame();
-	if(!bRecording || bRecording && pRecordEnt == &mPlayer)
+	if(!bRecording || (bRecording && pRecordEnt == &mPlayer))
 	{
 		if(!bDemo)
 		{
@@ -91,7 +91,7 @@ void Engine::InitializeGame()
 	bPauseScrolling = false;
 
 
-	if(mWeaponCheats && !bDemo || bBossFight && !bDemo)
+	if((mWeaponCheats && !bDemo) || (bBossFight && !bDemo))
 	{
 		PowerUp* p = new PowerUp;
 		p->iType = 0;
@@ -161,7 +161,7 @@ void Engine::UpdateGame(float delta)
 	UpdateMap();
 	UpdateGenerators();
 	UpdateEntities();
-	if(!bRecording || bRecording && pRecordEnt != &mPlayer)
+	if(!bRecording || (bRecording && pRecordEnt != &mPlayer))
 		mPlayer.PreUpdate();
 //	UpdateBullets();
 	UpdateExplosions();
@@ -254,7 +254,7 @@ void Engine::RenderGame(float interp)
 		(*b).Render(interp);
 	}
 	//render player
-	if(!bRecording || bRecording && pRecordEnt == &mPlayer)
+	if(!bRecording || (bRecording && pRecordEnt == &mPlayer))
 		mPlayer.Draw(interp);
 
 	RenderEntities(interp);

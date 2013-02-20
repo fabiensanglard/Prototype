@@ -12,7 +12,7 @@ void Sound::Volume(int channel,int vol){
 	Mix_Volume(1,vol);
 }
 
-bool Sample::Load(char* sound, bool loop){
+bool Sample::Load(const char* sound, bool loop){
 	this->pSample = Mix_LoadWAV(sound);
 	return true;
 }
@@ -31,7 +31,7 @@ void Sample::Discard(){
 
 
 
-bool Stream::Load(char* stream, bool loop)
+bool Stream::Load(const char* stream, bool loop)
 {
 	pStream = Mix_LoadMUS(stream);
 	return true;

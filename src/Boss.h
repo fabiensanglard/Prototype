@@ -6,6 +6,8 @@ class Boss : public Entity
 {
 public:
 	Boss();
+    
+    
 	void Spawn(Vec2 pos);
 	Boss* Clone()const;
 	void Update();
@@ -20,6 +22,9 @@ public:
 	Serpent *mSerpentAttackPattern1;
 	Serpent *mSerpentAttackPattern2;
 	Serpent *mSerpentAttackPattern3;
+    
+    
+    
 private:
 	bool bIsDead;
 	bool bJustSpawned;

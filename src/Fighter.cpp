@@ -47,7 +47,7 @@ Fighter* Fighter::Clone()const
 void Fighter::Update()
 {
 	iTakeDamageTicks--;
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 		if(!bCrashing)
 			PlayBack();
 

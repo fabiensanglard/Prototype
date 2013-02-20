@@ -6,6 +6,7 @@ Boss::Boss()
 {
 
 }
+
 //================================================================================================//
 						/*******************
 						** Boss spawn **	
@@ -349,9 +350,9 @@ void Boss::Update()
 	}
 
 	//update chargeup animations
-	if(gpEngine->mTimer.GetTime()<fTopGunFireTime || fAttackTicks>50 && fAttackTicks<150)
+	if(gpEngine->mTimer.GetTime()<fTopGunFireTime || (fAttackTicks>50 && fAttackTicks<150))
 		fTopCharge<31?fTopCharge+=0.5f:fTopCharge-=31;
-	if(gpEngine->mTimer.GetTime()<fLowGunFireTime || fAttackTicks>300 && fAttackTicks<400)
+	if(gpEngine->mTimer.GetTime()<fLowGunFireTime || (fAttackTicks>300 && fAttackTicks<400))
 		fLowCharge<31?fLowCharge+=0.5f:fLowCharge-=31;
 
 	//loop the attack patterns around
@@ -640,7 +641,7 @@ void Boss::Draw(const float interp)
 				RenderSprite(gpEngine->sprForceCharge,(int)overlap,Pos.x+160,204,-256,128);
 				glColor4f(1,1,1,1);
 			}
-			if(gpEngine->mTimer.GetTime()<fTopGunFireTime || fAttackTicks>50 && fAttackTicks<150)
+			if(gpEngine->mTimer.GetTime()<fTopGunFireTime || (fAttackTicks>50 && fAttackTicks<150))
 			{
 				UTIL_GL::SetBlend(GL_ONE, GL_ONE);
 				float overlap = fTopCharge+16;
@@ -650,7 +651,7 @@ void Boss::Draw(const float interp)
 				RenderSprite(gpEngine->sprBossCharge,(int)overlap,Pos.x,90,128,128);
 				glColor4f(1,1,1,1);
 			}
-			if(gpEngine->mTimer.GetTime()<fLowGunFireTime || fAttackTicks>300 && fAttackTicks<400)
+			if(gpEngine->mTimer.GetTime()<fLowGunFireTime || (fAttackTicks>300 && fAttackTicks<400))
 			{
 				UTIL_GL::SetBlend(GL_ONE, GL_ONE);
 				float overlap = fLowCharge+16;

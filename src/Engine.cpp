@@ -6,7 +6,7 @@
 						************************/
 //================================================================================================//
 Engine *gpEngine;
-Engine::Engine(int width, int height, bool fscreen, char* winName)
+Engine::Engine(int width, int height, bool fscreen, const char* winName)
 {
 	gpEngine = this;
 	//registering profiler funcs
@@ -155,7 +155,6 @@ void Engine::InitFmod()
 void Engine::Pump()
 {
 	char FPS[16];
-	int tick=0,oldtick=0;
 	float accumulator=0;
 	SDL_Event event;
 	while(!bQuit)
@@ -548,10 +547,11 @@ void Engine::KeyStateAlltered(int key,bool state)
 			EdPos.x=0;
 		}
 		break;
-/*	case SDLK_F5:
-		if(state)
-			int hello=1;
-		break;*/
+//	case SDLK_F5:
+//		if(state)
+//			int hello=1;
+		break;
+ */
 	}
 //	gLog.OutPut("KeyStateAlltered END\n");
 	

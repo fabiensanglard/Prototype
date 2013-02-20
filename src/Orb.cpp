@@ -124,7 +124,7 @@ void Orb::Draw(const float interp)
 	//orb
 	float x=UTIL_Misc::Interpolate(Pos.x,oPos.x,interp);
 	float y=UTIL_Misc::Interpolate(Pos.y,oPos.y,interp);
-	float s = sin(fPulsate);
+	
 	glColor4f(1,1,1,1);
 	if(gpEngine->mPlayer.bSpawnOrb)
 		glColor4f(0,1,1,(float)gpEngine->mPlayer.iSpawnOrbTicks/25.0f);

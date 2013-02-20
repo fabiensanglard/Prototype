@@ -140,7 +140,7 @@ void Font::SetAlignment(int align)
 {
 	mAlign = align;
 }
-float Font::GetStringLength(char* txt)
+float Font::GetStringLength(const char* txt)
 {
 	float length=0;
 	int l = (int)strlen(txt),n;
@@ -153,7 +153,7 @@ float Font::GetStringLength(char* txt)
 	}
 	return length;
 }
-void Font::Print(char* txt, float x, float y)
+void Font::Print(const char* txt, float x, float y)
 {
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D,texID);

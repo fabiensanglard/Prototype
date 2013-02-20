@@ -193,7 +193,7 @@ void Engine::PostWater(float interp)
 	glEnable(GL_SCISSOR_TEST);
 	glScissor(x1,480-(y2+32),x2,(y2-y1)+32);
 
-	float sw = (1.0f/32.0f);
+	
 	float th = (1.0f/16.0f);
 	gCharge+=0.1f;
 	float rs = sin(gCharge)*0.005f;

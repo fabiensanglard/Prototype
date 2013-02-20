@@ -11,7 +11,7 @@ namespace UTIL_SDL
 									 ** Initialize SDL **
 									 ********************/
 //================================================================================================//
-	bool InitSDL(char* winName, int width, int height, int bpp, bool vsync, bool fscreen)
+	bool InitSDL(const char* winName, int width, int height, int bpp, bool vsync, bool fscreen)
 	{
 		gLog.OutPut("\n[Initializing Video Settings]\n");
 		const SDL_VideoInfo* info = NULL;

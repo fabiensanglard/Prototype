@@ -114,7 +114,7 @@ void Player::Update()
 		Pos.x+=SCROLL_SPEED + gpEngine->fMapSpeed;
 
 	//im dead
-	if(gpEngine->bDemo &&  bDemoIsFinished || bIsDead)
+	if((gpEngine->bDemo &&  bDemoIsFinished) || bIsDead)
 	{
 		iDelayBeforeRespawn--;
 		if(iDelayBeforeRespawn==100)
@@ -149,7 +149,7 @@ void Player::Update()
 		}
 	}
 
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 //	if(bPlayBack)
 	if(gpEngine->bDemo)
 		PlayBack();
@@ -239,7 +239,7 @@ void Player::Update()
 	}
 
 	//centralize animation
-	if(KEY_UP.state == RELEASED && KEY_DOWN.state == RELEASED || KEY_UP.state == PRESSED && KEY_DOWN.state == PRESSED)
+	if((KEY_UP.state == RELEASED && KEY_DOWN.state == RELEASED) || (KEY_UP.state == PRESSED && KEY_DOWN.state == PRESSED))
 	{
 		if(frame<8)
 			frame+=0.75f;
@@ -401,7 +401,7 @@ void Player::Update()
 			}
 		}
 		//fire weak bullets from ship
-		if(!bHasOrb || bHasOrb && mOrb.iWeaponType !=3)
+		if(!bHasOrb || (bHasOrb && mOrb.iWeaponType !=3))
 		if(gpEngine->mTimer.GetTime()>fLastFireTime+0.125f)
 		{
 			fLastFireTime =gpEngine->mTimer.GetTime();
@@ -550,7 +550,7 @@ void Player::Draw(const float interp)
 	float x=UTIL_Misc::Interpolate(Pos.x,oPos.x,interp);
 	float y=UTIL_Misc::Interpolate(Pos.y,oPos.y,interp);
 
-	if(!bJustSpawned && gpEngine->bWimpMode || !bJustSpawned && numShields>0)
+	if((!bJustSpawned && gpEngine->bWimpMode) || (!bJustSpawned && numShields>0))
 	{
 		UTIL_GL::BindTexture(GL_TEXTURE_2D,gpEngine->imgBossPush);
 		UTIL_GL::SetBlend(GL_ONE, GL_ONE);

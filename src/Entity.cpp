@@ -1,5 +1,11 @@
 #include "Entity.h"
 #include "Engine.h"
+
+
+
+Entity::~Entity(void){}
+
+
 //================================================================================================//
 					/*******************************************************
 					** test the ents bounding sphere agains the map tiles **

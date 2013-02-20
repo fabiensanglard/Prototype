@@ -90,7 +90,7 @@ void BrainBoss::Update()
 	}
 	if(iAttackWave==1)
 	{
-		if(iAttackTicks>=100 && iAttackTicks<=130|| iAttackTicks<=30)
+		if((iAttackTicks>=100 && iAttackTicks<=130) || iAttackTicks<=30)
 		if(gpEngine->mTimer.GetTime()>fRateOfFire)
 		{
 			fRateOfFire = gpEngine->mTimer.GetTime()+0.1f;

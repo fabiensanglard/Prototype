@@ -46,7 +46,7 @@ Bug* Bug::Clone()const
 void Bug::Update()
 {
 	iTakeDamageTicks--;
-	if(!gpEngine->bRecording || gpEngine->bRecording && gpEngine->pRecordEnt != this)
+	if(!gpEngine->bRecording || (gpEngine->bRecording && gpEngine->pRecordEnt != this))
 		PlayBack();
 
 	oPos = Pos;

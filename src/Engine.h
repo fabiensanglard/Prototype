@@ -206,7 +206,7 @@ private:
 		void RenderHud(float interp);
 public:
 
-	Engine(int width, int height, bool fscreen, char* winName);
+	Engine(int width, int height, bool fscreen, const char* winName);
 	~Engine(void);
 	//components
 	Timer	mTimer;

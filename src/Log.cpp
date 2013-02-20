@@ -12,7 +12,7 @@ void Log::OutPut(string str)
 	if(!bKeepLog)
 		return;
 #ifdef PRINT_TO_CONSOLE
-	printf(str.c_str());
+	printf("%s\n",str.c_str());
 #endif
 	ofstream f;
 	if(!lcount)
