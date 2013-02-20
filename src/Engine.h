@@ -5,8 +5,10 @@
     #include <sdl.h>
 #else
     #include <SDL/SDL.h>
-    #define DeleteFile unlink
-    #define stricmp strcasecmp
+    #include <unistd.h>
+    #include <cstring>
+    #define DeleteFile ::unlink
+    #define stricmp ::strcasecmp
     #define _TCHAR char
 #define _tmain main
 #endif
@@ -57,7 +59,7 @@
 #include "TriggerSlowDown.h"
 #include "Fire.h"
 #include "SolarFlare.h"
-#include "FireBug.h"
+#include "fireBug.h"
 #include "SpaceTrash.h"
 #include <list>
 using namespace std;

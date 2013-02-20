@@ -1,6 +1,6 @@
 #include "Bug.h"
 #include "Engine.h"
-#include "debris.h"
+#include "Debris.h"
 
 Bug::Bug()
 {

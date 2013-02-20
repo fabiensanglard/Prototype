@@ -1,3 +1,4 @@
+#include <cstring>
 #include "Font.h"
 Font::Font()
 {
@@ -143,7 +144,7 @@ void Font::SetAlignment(int align)
 float Font::GetStringLength(const char* txt)
 {
 	float length=0;
-	int l = (int)strlen(txt),n;
+	int l = (int)::strlen(txt),n;
 	for(n=0;n<l;n++)
 	{
 		if(txt[n]<=32)
@@ -173,7 +174,7 @@ void Font::Print(const char* txt, float x, float y)
 	float x2=x,y2=y;
 	if(bShadow)
 		LoopCount=2;
-	int l = (int)strlen(txt),n,i;
+	int l = (int)::strlen(txt),n,i;
 	for(i=0;i<LoopCount;i++)
 	{
 		if(i==0 && bShadow)

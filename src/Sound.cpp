@@ -2,10 +2,13 @@
 #ifdef WIN32
 #include <sdl.h>
 #include "SDL_mixer.h"
-
 #else
 #include <SDL/SDL.h>
+#if defined(__linux__)
+#include <SDL/SDL_mixer.h>
+#else
 #include "SDL_Mixer/SDL_Mixer.h"
+#endif
 #endif
 
 void Sound::Volume(int channel,int vol){
