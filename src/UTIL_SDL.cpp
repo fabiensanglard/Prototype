@@ -188,7 +188,13 @@ namespace UTIL_SDL
 	void initializeGLEW(void)
 	{
 	  static bool is_initialized = false;
-	  if (is_initialized == false) glewInit();
+	  if (is_initialized == false)
+	  {
+	    const GLenum error = glewInit();
+	    if (error != GLEW_OK)
+	      printf("glewInit error: %x\n", error);
+	    is_initialized = true;
+	  }
 	}
 #endif
 
