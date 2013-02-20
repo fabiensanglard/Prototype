@@ -1,4 +1,4 @@
-#include "FireBug.h"
+#include "fireBug.h"
 #include "Engine.h"
 #include "Debris.h"
 FireBug::FireBug()

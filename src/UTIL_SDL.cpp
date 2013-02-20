@@ -1,3 +1,4 @@
+#include "UTIL_openGL.h"
 #include "UTIL_SDL.h"
 //================================================================================================//
 									/*****************
@@ -182,6 +183,13 @@ namespace UTIL_SDL
 		glFramebufferTexture2D	= (PFNGLFRAMEBUFFERTEXTURE2DEXTPROC)wglGetProcAddress("glFramebufferTexture2DEXT");
 		glCheckFramebufferStatus	= (PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC)wglGetProcAddress("glCheckFramebufferStatusEXT");
 	}
+
+#elif defined(__linux__)
+	void initializeGLEW(void)
+	{
+	  static bool is_initialized = false;
+	  if (is_initialized == false) glewInit();
+	}
 #endif
 
 
@@ -207,6 +215,8 @@ namespace UTIL_SDL
 			getOpenGLFunctionPointers();
 			windowsOpenGLInitialized=1;
 		}
+		#elif defined(__linux__)
+		initializeGLEW();
 		#endif
 
 

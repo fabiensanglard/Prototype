@@ -6,15 +6,23 @@
 #include <gl/glu.h>
 #include "gl/glext.h"
 #include "gl/wglext.h"
+#elif defined(__linux__)
+#include <GL/glew.h>
 #else
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 #endif
 
 #define ILUT_USE_OPENGL 1
+#if defined(__linux__)
+#include <IL/il.h>
+#include <IL/ilu.h>
+#include <IL/ilut.h>
+#else
 #include <il/il.h>
 #include <il/ilu.h>
 #include <il/ilut.h>
+#endif
 #include <string>
 #include <sstream>
 #include "Log.h"

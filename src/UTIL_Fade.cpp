@@ -1,6 +1,6 @@
 #include "UTIL_Fade.h"
 #include "UTIL_Misc.h"
-#include "UTIL_OpenGL.h"
+#include "UTIL_openGL.h"
 
 Fade::Fade()
 {
