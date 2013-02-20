@@ -1,3 +1,4 @@
+#include <cstring>
 #include "UTIL_openGL.h"
 unsigned int textureMem=0;
 namespace UTIL_GL
@@ -118,7 +119,7 @@ namespace UTIL_GL
 			bpp = ilGetInteger(IL_IMAGE_BPP);
 			unsigned char* data=NULL;
 			data = new unsigned char [width*height*bpp];
-			memcpy(data,ilGetData(),width*height*bpp);
+			::memcpy(data,ilGetData(),width*height*bpp);
 			ilDeleteImages(1, &ImageName);
 			unsigned int ID=0;
 			glEnable(GL_TEXTURE_2D);
@@ -153,7 +154,7 @@ namespace UTIL_GL
 			bpp = ilGetInteger(IL_IMAGE_BPP);
 			unsigned char* data=NULL;
 			data = new unsigned char [width*height*bpp];
-			memcpy(data,ilGetData(),width*height*bpp);
+			::memcpy(data,ilGetData(),width*height*bpp);
 			ilDeleteImages(1, &ImageName);
 			return data;
 		}

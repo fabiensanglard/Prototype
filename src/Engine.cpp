@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "Engine.h"
 //#define PROFILE_TIME 100//set your profile time here (if you want to profile for specific set length)
 //================================================================================================//
 						/***********************
@@ -682,21 +682,21 @@ bool Engine::LoadConstantData()
 		return false;
 	sprPlr.Split(ID,512,512,128,128);
 
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/ForceCharge.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/forcecharge.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprForceCharge.Split(ID,512,256,64,64);
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Orb1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprOrb1.Split(ID,512,512,64,64);
 
-	if(!(imgChain=UTIL_GL::Image::LoadImage("Data/Gfx/ChainParticle.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
+	if(!(imgChain=UTIL_GL::Image::LoadImage("Data/Gfx/chainParticle.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
 		return false;
 
 	//entity sprites - if things get too much overhead, we may have to only load those that are neccesary
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/LadyBird.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Ladybird.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprLadyBird.Split(ID,256,256,64,64);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/turret1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Turret1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprTurret.Split(ID,256,256,64,64);
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/SuperTurret.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
@@ -729,7 +729,7 @@ bool Engine::LoadConstantData()
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Bug.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprBug.Split(ID,256,256,64,64);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Starburst.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/StarBurst.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprStarBurst.Split(ID,256,256,64,64);
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Fighter.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
@@ -804,7 +804,7 @@ bool Engine::LoadConstantData()
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/BulletSet1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprBulletSet1.Split(ID,64,128,32,32);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Forceblast.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/forceblast.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprBulletForce.Split(ID,128,64,128,64);
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/GlowBullets.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
@@ -825,7 +825,7 @@ bool Engine::LoadConstantData()
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Missile.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprMissile.Split(ID,256,128,64,64);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/FireBall.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Fireball.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprFireBall.Split(ID,512,512,128,128);
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/HomingMissile.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
@@ -860,19 +860,19 @@ bool Engine::LoadConstantData()
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/PlayerSpeed.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprSpeedBoost.Split(ID,512,256,64,64);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Anim_back1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/anim_back1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprAnimBack1.Split(ID,256,128,64,128);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Anim_back2.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/anim_back2.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprAnimBack2.Split(ID,128,128,64,64);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Anim_Fore1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/anim_Fore1.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprAnimFore1.Split(ID,128,128,64,64);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Anim_Fore2.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/anim_Fore2.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprAnimFore2.Split(ID,128,128,32,32);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/Anim_Fore3.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/anim_Fore3.png",GL_LINEAR,GL_LINEAR,GL_CLAMP_TO_EDGE,GL_CLAMP_TO_EDGE)))
 		return false;
 	sprAnimFore3.Split(ID,256,128,64,32);
 	//breakable scenery
@@ -883,7 +883,7 @@ bool Engine::LoadConstantData()
 	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/water.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
 		return false;
 	sprWater.Split(ID,32,32,32,32);
-	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/watersplash.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
+	if(!(ID=UTIL_GL::Image::LoadImage("Data/Gfx/WaterSplash.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
 		return false;
 	sprWaterSplash.Split(ID,64,64,32,32);
 
@@ -898,7 +898,7 @@ bool Engine::LoadConstantData()
 		return false;
 	if(!(imgGameOver=UTIL_GL::Image::LoadImage("Data/Gfx/GameOver.psd",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
 		return false;
-	if(!(imgProtoTypeMk1=UTIL_GL::Image::LoadImage("Data/Gfx/Prototypemk1.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
+	if(!(imgProtoTypeMk1=UTIL_GL::Image::LoadImage("Data/Gfx/PrototypeMk1.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
 		return false;
 	if(!(imgCongrats=UTIL_GL::Image::LoadImage("Data/Gfx/Congrats.png",GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT)))
 		return false;

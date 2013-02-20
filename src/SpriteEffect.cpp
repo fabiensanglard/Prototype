@@ -1,6 +1,6 @@
 #include "SpriteEffect.h"
 #include "UTIL_openGL.h"
-#include "UTIL_misc.h"
+#include "UTIL_Misc.h"
 #include "Sprite.h"
 #include "Engine.h"
 SpriteEffect::SpriteEffect()

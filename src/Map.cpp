@@ -1,5 +1,5 @@
 #include "Engine.h"
-#include "UTIL_Bitop.h"
+#include "UTIL_bitop.h"
 //================================================================================================//
 						/*********************************
 						** Little cleanup of the arrays **	

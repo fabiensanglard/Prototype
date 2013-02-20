@@ -1,10 +1,10 @@
 #pragma once
 #include "Vector.h"
 #include "Button.h"
-#include "UTIL_Bitop.h"
+#include "UTIL_bitop.h"
 #include "Sprite.h"
 #include "UTIL_Misc.h"
-#include "Geo2d.h"
+#include "Geo2D.h"
 #include "Geo2D_Draw.h"
 #include "FileIO.h"
 #include <list>
