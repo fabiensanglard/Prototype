@@ -188,7 +188,25 @@ namespace UTIL_SDL
 	void initializeGLEW(void)
 	{
 	  static bool is_initialized = false;
-	  if (is_initialized == false) glewInit();
+	  if (is_initialized == false)
+	  {
+	    const GLenum error = glewInit();
+	    if (error != GLEW_OK)
+	      printf("glewInit error: %x\n", error);
+	    else
+	      {
+		if (glGenFramebuffers == NULL)
+		  {
+		    glGenFramebuffers = glGenFramebuffersEXT;
+		    glBindFramebuffer = glBindFramebufferEXT;
+		    glFramebufferTexture2D = glFramebufferTexture2DEXT;
+		    glCheckFramebufferStatus = glCheckFramebufferStatusEXT;
+		  }
+		if (glGenFramebuffersEXT == NULL)
+		  printf("FrameBuffer NOT supported\n");
+	      }
+	    is_initialized = true;
+	  }
 	}
 #endif
 
@@ -219,8 +237,6 @@ namespace UTIL_SDL
 		initializeGLEW();
 		#endif
 
-
-
 		GLuint textureId;
 		glGenTextures(1, &textureId);
 		glBindTexture(GL_TEXTURE_2D, textureId);
@@ -230,7 +246,7 @@ namespace UTIL_SDL
 		//glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 		//glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE); // automatic mipmap
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0,GL_RGBA, GL_UNSIGNED_BYTE, 0);
-		
+
 		// create a framebuffer object
 		GLuint fboId;
 		glGenFramebuffers(1, &fboId);
