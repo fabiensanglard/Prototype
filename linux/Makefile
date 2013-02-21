@@ -82,7 +82,7 @@ LFLAGS := -lSDL -lSDL_mixer -lGL -lGLEW -L$(DEVIL_DIR)/lib -lIL -lILU -lILUT
 
 all: $(X_FILES)
 $(X_FILES): $(O_FILES)
-	$(LD) $(LFLAGS) -o $@ $(O_FILES)
+	$(LD) -o $@ $(O_FILES) $(LFLAGS)
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c -o $@ $<
 clean:
