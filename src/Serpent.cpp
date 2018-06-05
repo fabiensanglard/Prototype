@@ -131,9 +131,9 @@ void Serpent::Update()
 	iTickSection--;
 	if((IsHead && iTickSection == 0) || (IsHead && iTickSection==7 && iCurSection == SERPENT_LENGTH))
 	{
-		if(iCurSection>=0)
+		if(iCurSection>0)
 		{
-			mSections[iCurSection].SpawnSection(StartPos);
+			mSections[iCurSection-1].SpawnSection(StartPos);
 			iCurSection--;
 			iTickSection = 10;
 		}
